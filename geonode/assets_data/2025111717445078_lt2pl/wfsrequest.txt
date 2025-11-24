@@ -1,0 +1,1 @@
+https://themaplab.org/geoserver/Flame_Workspace_1/wms?service=WFS&version=1.1.0&request=GetFeature&typeName=Flame_Workspace_1%3Aajmer_poi&bbox=74.6251983642578%2C26.448371887207%2C74.6404571533203%2C26.4713573455811&width=509&height=768&srs=EPSG%3A4326&styles=&outputFormat=SHAPE-ZIP

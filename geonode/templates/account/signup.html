@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    .msgapi .gn-legacy form input {
+      height: 50px;
+      border-radius: 10px;
+    }
+    button {
+      height: 50px;
+      border-radius: 10px;
+    }
+    .msgapi .checkbox input[type=checkbox],
+    .msgapi .checkbox-inline input[type=checkbox],
+    .msgapi .radio input[type=radio],
+    .msgapi .radio-inline input[type=radio] {
+      margin-left: -20px;
+      margin-top: -14px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load bootstrap_tags %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign Up" %}{% endblock %}
+
+{% block body_outer %}
+<div class="container-fluid vh-100">
+  <div class="row h-100">
+    
+    <!-- Left Side Image -->
+    <div class="col-md-6 d-none d-md-block p-0">
+      <div class="h-100 w-100"
+           style="background-image: url('https://i.pinimg.com/originals/52/e1/6d/52e16d15c27413f45eacdc2cec334a88.jpg');
+                  background-size: cover;
+                  background-position: center;
+                  min-height: 100vh;
+                  margin-top:-70px;
+                  margin-left:-206px;">
+      </div>
+    </div>
+
+    <!-- Right Side Signup Form -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center" style="padding-left: 143px; margin-top: -20px;">
+      <div class="w-100" style="max-width: 420px;">
+        
+        <!-- Logo -->
+        <div class="text-center mb-4">
+          <img src="https://products.coderize.in/assets/icon.jpeg" alt="Logo" style="height:60px;">
+        </div>
+        
+        <!-- Title -->
+        <h2 class="text-center mb-4" style="color:#f58220; font-weight:600;">
+          {% trans "SIGN UP" %}
+        </h2>
+        <p class="text-center text-muted mb-4">
+          {% trans "Create your new account" %}
+        </p>
+
+        <!-- Signup Form -->
+        <form id="signup_form" method="post" action="{% url 'account_signup' %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+          {% csrf_token %}
+          {{ form|as_bootstrap }}
+          {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+
+          <button class="btn w-100 mb-3" type="submit"
+                  style="background: #f58220;
+                        color: #fff;
+                        font-weight: 600;
+                        width: 100%;
+                        border-radius: 5px;">
+            {% trans "SIGN UP" %}
+          </button>
+        </form>
+
+        <!-- Links -->
+        <div class="text-center mt-2" style="margin-top: 20px;">
+          <p>{% trans "Already have an account?" %}
+            <a href="{{ login_url }}" style="color:#f58220; font-weight:600;">
+              {% trans "SIGN IN" %}
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock body_outer %}
+</body>
+</html>

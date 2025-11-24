@@ -1,0 +1,20 @@
+{% load i18n %}
+{% autoescape off %}
+{% blocktrans %}Dear Sir/Madam,{% endblocktrans %}
+
+{{ inviter_name }} {% blocktrans %}is inviting you to join{% endblocktrans %} ({{ site_name|urlencode }}).
+
+{% blocktrans %}To do so, please register at{% endblocktrans %} {{ invite_url }} .
+
+{% blocktrans %}Once you receive the confirmation that your account is activated, you can notify{% endblocktrans %} {{ inviter_name }} {% blocktrans %}that you wish to join her/his group(s) through this link{% endblocktrans %}
+
+{{ inviter_name }} {% blocktrans %}is a member of the following group(s){% endblocktrans %}:
+{% for group in groups %}
+- {{ group }}
+{% endfor %}
+
+{% blocktrans %}We look forward to seeing you on the platform,{% endblocktrans %}
+
+{% blocktrans %}The GeoNode team.{% endblocktrans %}
+
+{% endautoescape %}

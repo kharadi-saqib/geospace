@@ -1,0 +1,15 @@
+{% load i18n %}
+<p>{% blocktrans %}Dear Sir/Madam,{% endblocktrans %}</p>
+<p><strong>{{ inviter_name }}</strong> {% blocktrans %}is inviting you to join ({{ site_name|urlencode }}).{% endblocktrans %}</p>
+<p>
+    {% blocktrans %}To do so, please register at <a href="{{ invite_url }}">{{ site_name|urlencode }} Registration</a>.{% endblocktrans %}
+</p>
+
+<p>{% blocktrans %}<strong>{{ inviter_name }}</strong> is a member of the following group(s):{% endblocktrans %}</p>
+<ul>
+    {% for group in groups %}
+        <li><a href="{{ SITEURL }}{% url "group_detail" group.slug %}">{{ group }}</a></li>
+    {% endfor %}
+</ul>
+<p>{% blocktrans %}We look forward to seeing you on the platform,{% endblocktrans %}</p>
+<p>{% blocktrans %}The GeoNode team.{% endblocktrans %}</p>

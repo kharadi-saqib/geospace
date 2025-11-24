@@ -1,0 +1,23 @@
+
+
+Database Create.
+Database Modification
+Project Creation.
+API Creation.
+API Tests.
+Code Modification.
+Documentation
+Deployment and Maintenance
+Firewall Configuration
+Error Solving
+Port Configuration
+Testing
+Technical Discussion
+Schema Create
+Model Creation.
+Logic Development
+Testing and Debugging
+Continuous Learning and Improvement
+API Development and Integration
+Working with Data.
+Git activity

@@ -1,0 +1,1 @@
+https://themaplab.org/geoserver/Flame_Workspace_1/wms?service=WFS&version=1.1.0&request=GetFeature&typeName=Flame_Workspace_1:AMRITSAR&bbox=74.8481755177522,31.6100481982422,74.88979038276,31.6420592199193&width=768&height=384&srs=EPSG:4326&outputFormat=SHAPE-ZIP
