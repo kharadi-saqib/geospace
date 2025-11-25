@@ -167,7 +167,7 @@ if os.getenv("DEFAULT_BACKEND_DATASTORE"):
     GEODATABASE_URL = os.getenv(
         "GEODATABASE_URL",
         "postgis://\
-:geonode@3.110.66.127:5432/geonode",
+:geonode_data@3.110.66.127:5432/geonode_data",
     )
     DATABASES[os.getenv("DEFAULT_BACKEND_DATASTORE")] = dj_database_url.parse(
         GEODATABASE_URL, conn_max_age=GEONODE_DB_CONN_MAX_AGE
@@ -1165,7 +1165,7 @@ OGC_SERVER = {
         "LOG_FILE": f"{os.path.abspath(os.path.join(PROJECT_ROOT, os.pardir))}/geoserver/data/logs/geoserver.log",
         # Set to name of database in DATABASES dictionary to enable
         # 'datastore',
-        "DATASTORE":'datastore',
+        "DATASTORE":'geonode_data',
         "TIMEOUT": int(os.getenv("OGC_REQUEST_TIMEOUT", "60")),
         "MAX_RETRIES": int(os.getenv("OGC_REQUEST_MAX_RETRIES", "3")),
         "BACKOFF_FACTOR": float(os.getenv("OGC_REQUEST_BACKOFF_FACTOR", "0.3")),
