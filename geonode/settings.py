@@ -142,19 +142,19 @@ if "postgresql" in DATABASE_URL or "postgis" in DATABASE_URL:
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',  
-        'NAME': 'geonode_08sep_25',         
-        'USER': 'postgres',       
-        'PASSWORD': 'postgres', 
-        'HOST': 'localhost',       
-        'PORT': '5432',         
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'geonode',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '65.2.9.14',
+        'PORT': '5432',
     },
     'datastore': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'geonode_08sep_25',
+        'NAME': 'geonode',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'HOST': '65.2.9.14',
         'PORT': '5432',
     }
 }
