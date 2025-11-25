@@ -1054,7 +1054,7 @@ TOPICCATEGORY_MANDATORY = ast.literal_eval(os.environ.get("TOPICCATEGORY_MANDATO
 MISSING_THUMBNAIL = os.getenv("MISSING_THUMBNAIL", "geonode/img/missing_thumb.png")
 
 # GEOSERVER_LOCATION = os.getenv("GEOSERVER_LOCATION", "http://209.182.234.193:8080/geoserver/")
-GEOSERVER_LOCATION = os.getenv("GEOSERVER_LOCATION", "http://localhost:8081/geoserver/")
+GEOSERVER_LOCATION = os.getenv("GEOSERVER_LOCATION", "http://geoserver.cloudsentry.in/geoserver/")
 
 # add trailing slash to geoserver location url.
 if not GEOSERVER_LOCATION.endswith("/"):
@@ -1066,8 +1066,8 @@ if not GEOSERVER_LOCATION.endswith("/"):
 
 # GEOSERVER_PUBLIC_PORT = os.getenv("GEOSERVER_PUBLIC_PORT", 8080)
 GEOSERVER_PUBLIC_SCHEMA = os.getenv("GEOSERVER_PUBLIC_SCHEMA", "http")
-GEOSERVER_PUBLIC_HOST = os.getenv("GEOSERVER_PUBLIC_HOST", "localhost")
-GEOSERVER_PUBLIC_PORT = os.getenv("GEOSERVER_PUBLIC_PORT", "8081")
+GEOSERVER_PUBLIC_HOST = os.getenv("GEOSERVER_PUBLIC_HOST", "geoserver.cloudsentry.in")
+GEOSERVER_PUBLIC_PORT = os.getenv("GEOSERVER_PUBLIC_PORT", "8080")
 
 if GEOSERVER_PUBLIC_PORT:
     _default_public_location = f"{GEOSERVER_PUBLIC_SCHEMA}://{GEOSERVER_PUBLIC_HOST}:{GEOSERVER_PUBLIC_PORT}/geoserver/"
@@ -1143,14 +1143,14 @@ OGC_SERVER = {
     "default": {
         # "BACKEND": os.getenv("BACKEND", "geonode.geoserver"),
         "BACKEND": "geonode.geoserver",
-        "LOCATION": 'http://localhost:8081/geoserver/',
+        "LOCATION": 'http://geoserver.cloudsentry.in/geoserver/',
         "WEB_UI_LOCATION": GEOSERVER_WEB_UI_LOCATION,
         "LOGIN_ENDPOINT": "j_spring_oauth2_geonode_login",
         "LOGOUT_ENDPOINT": "j_spring_oauth2_geonode_logout",
         # PUBLIC_LOCATION needs to be kept like this because in dev mode
         # the proxy won't work and the integration tests will fail
         # the entire block has to be overridden in the local_settings
-        "PUBLIC_LOCATION": 'http://localhost:8081/geoserver/',
+        "PUBLIC_LOCATION": 'http://geoserver.cloudsentry.in/geoserver/',
          "USER": "admin",
         "PASSWORD": "geoserver",
         "MAPFISH_PRINT_ENABLED": ast.literal_eval(os.getenv("MAPFISH_PRINT_ENABLED", "True")),
