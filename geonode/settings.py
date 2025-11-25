@@ -146,7 +146,7 @@ DATABASES = {
         'NAME': 'geonode',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '65.2.9.14',
+        'HOST': '3.110.66.127',
         'PORT': '5432',
     },
     'datastore': {
@@ -154,7 +154,7 @@ DATABASES = {
         'NAME': 'geonode',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '65.2.9.14',
+        'HOST': '3.110.66.127',
         'PORT': '5432',
     }
 }
