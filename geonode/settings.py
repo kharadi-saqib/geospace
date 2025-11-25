@@ -167,7 +167,7 @@ if os.getenv("DEFAULT_BACKEND_DATASTORE"):
     GEODATABASE_URL = os.getenv(
         "GEODATABASE_URL",
         "postgis://\
-geonode_data:geonode_data@localhost:5432/geonode_data",
+:geonode@3.110.66.127:5432/geonode",
     )
     DATABASES[os.getenv("DEFAULT_BACKEND_DATASTORE")] = dj_database_url.parse(
         GEODATABASE_URL, conn_max_age=GEONODE_DB_CONN_MAX_AGE
