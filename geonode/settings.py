@@ -1165,7 +1165,7 @@ OGC_SERVER = {
         "LOG_FILE": f"{os.path.abspath(os.path.join(PROJECT_ROOT, os.pardir))}/geoserver/data/logs/geoserver.log",
         # Set to name of database in DATABASES dictionary to enable
         # 'datastore',
-        "DATASTORE":'geonode_data',
+        "DATASTORE":'datastore',
         "TIMEOUT": int(os.getenv("OGC_REQUEST_TIMEOUT", "60")),
         "MAX_RETRIES": int(os.getenv("OGC_REQUEST_MAX_RETRIES", "3")),
         "BACKOFF_FACTOR": float(os.getenv("OGC_REQUEST_BACKOFF_FACTOR", "0.3")),
