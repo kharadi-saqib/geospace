@@ -159,7 +159,7 @@ DATABASES = {
     }
 }
 
-DATASTORE_SCHEMA = "geonode"
+DATASTORE_SCHEMA = "public"
 DJANGO_SETTINGS_MODULE="geonode.settings"
 GEONODE_INSTANCE_NAME="geonode"
 
