@@ -146,7 +146,7 @@ DATABASES = {
         'NAME': 'geonode',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '3.110.66.127',
+        'HOST': '3.108.4.129',
         'PORT': '5432',
     },
     'datastore': {
@@ -154,7 +154,7 @@ DATABASES = {
         'NAME': 'geonode',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '3.110.66.127',
+        'HOST': '3.108.4.129',
         'PORT': '5432',
     }
 }
@@ -167,7 +167,7 @@ if os.getenv("DEFAULT_BACKEND_DATASTORE"):
     GEODATABASE_URL = os.getenv(
         "GEODATABASE_URL",
         "postgis://\
-:geonode_data@3.110.66.127:5432/geonode_data",
+:geonode_data@3.108.4.129:5432/geonode_data",
     )
     DATABASES[os.getenv("DEFAULT_BACKEND_DATASTORE")] = dj_database_url.parse(
         GEODATABASE_URL, conn_max_age=GEONODE_DB_CONN_MAX_AGE
