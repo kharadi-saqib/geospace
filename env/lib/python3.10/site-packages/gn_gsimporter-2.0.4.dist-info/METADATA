@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: gn-gsimporter
+Version: 2.0.4
+Summary: GeoNode GeoServer Importer Client
+Home-page: https://github.com/GeoNode/gsimporter
+Author: Ian Schneider
+Author-email: ischneider@opengeo.org
+License: MIT
+Keywords: GeoNode GeoServer Importer
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: httplib2
+Requires-Dist: urllib3
+Requires-Dist: six
+Provides-Extra: testing
+Requires-Dist: gisdata (>=0.5.4) ; extra == 'testing'
+Requires-Dist: geoserver-restconfig (>=1.0.1) ; extra == 'testing'
+Requires-Dist: psycopg2 ; extra == 'testing'
+Requires-Dist: OWSLib (<0.9.0,>=0.7.2) ; extra == 'testing'
+Requires-Dist: unittest2 ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+
+UNKNOWN
+

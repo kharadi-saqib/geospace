@@ -1,0 +1,2 @@
+[console_scripts]
+geopackage-validator = geopackage_validator.cli:cli

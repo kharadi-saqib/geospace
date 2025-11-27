@@ -1,0 +1,17 @@
+gn_gsimporter-2.0.4.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+gn_gsimporter-2.0.4.dist-info/METADATA,sha256=A0CFdypLcXW5UfswxlINWRQmfoH5Inq3apzXO7jvXFw,1328
+gn_gsimporter-2.0.4.dist-info/RECORD,,
+gn_gsimporter-2.0.4.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gn_gsimporter-2.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gn_gsimporter-2.0.4.dist-info/top_level.txt,sha256=5bX3KWFdkCRF84dmVkEN_Abzz6VuW2vyBb7bS3FbHUs,16
+gsimporter/__init__.py,sha256=njb4T1J6W4kesqeZGA2209tqycoo7v0fpM7VvJix8fE,112
+gsimporter/__pycache__/__init__.cpython-310.pyc,,
+gsimporter/__pycache__/_util.cpython-310.pyc,,
+gsimporter/__pycache__/api.cpython-310.pyc,,
+gsimporter/__pycache__/client.cpython-310.pyc,,
+gsimporter/_util.py,sha256=bakISUv6YL5DdFkrDANwrL8rKi5iLL6H8NRup5ydKtM,599
+gsimporter/api.py,sha256=nD8Vchst3Ye4lj0CRNrHnrLO9wBAg-GB1M3O9J_qAsk,16257
+gsimporter/client.py,sha256=QYhmcvIHWVcySuJojuEBg2dSLkidFQfpvTbItsLy7xk,11780
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/__pycache__/__init__.cpython-310.pyc,,
+test/uploadtests.py,sha256=cskrCeIJhrCGYGheswvpq4XWrOgd7c8YEWeY4jtpbV0,20913

@@ -1,0 +1,2 @@
+[console_scripts]
+pycsw-admin.py = pycsw.core.admin:cli

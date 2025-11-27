@@ -1,0 +1,46 @@
+{% extends "geonode_base.html" %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap_tags %}
+
+{% block title %} {% trans "Batch Edit" %} - {{ block.super }} {% endblock %}
+
+{% block body_class %}batch edit{% endblock %}
+
+{% block body %}
+<!-- Required to make select2 fields work for autocomplete -->
+<script defer src="{% static "lib/js/select2.full.min.js" %}"></script>
+<link href="{% static "lib/css/select2.min.css" %}" rel="stylesheet" />
+
+<!-- DAL core (deferred) -->
+<script defer src="{% static "lib/js/autocomplete_light/autocomplete_light.min.js" %}"></script>
+<script defer src="{% static "lib/js/autocomplete_light/select2.js" %}"></script>
+<link href="{% static "lib/js/autocomplete_light/select2.css" %}" rel="stylesheet">
+
+<div class="page-header">
+  <h2 class="page-title">{% trans "Batch Edit" %}</h2>
+</div>
+<form action="/{{ model|lower }}/dataset/permission/" method="post">
+  {% csrf_token %}
+  <div id="layers_multi_select">                                  
+    <span><label for="{{ form.layers.label }}">{{ form.layers.label }}</label></span>
+    {{ form.layers }}
+  </div>
+  <br>
+  <div id="perms_multi_select">
+    <span><label for="{{ form.permission_type.label }}">{{ form.permission_type.label }}</label></span>
+    {{ form.permission_type }}
+  </div>
+  <div id="set_multi_select">
+    <span><label for="{{ form.mode.label }}">{{ form.mode.label }}</label></span>
+    {{ form.mode }}
+  </div>
+  <div id="id_multi_select">
+    {{ form.ids }}
+  </div>
+  <div>
+    <input class="btn" type="submit" name="cancel" value="{% trans "Cancel" %}" />
+    <input class="btn btn-primary" type="submit" value="{% trans "Submit" %}" />
+  </div>
+</form>
+{% endblock %}
