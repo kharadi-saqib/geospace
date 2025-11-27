@@ -146,7 +146,7 @@ DATABASES = {
         'NAME': 'geonode_data',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '3.108.4.129',
+        'HOST': '13.200.36.215',
         'PORT': '5432',
     },
     'datastore': {
@@ -154,7 +154,7 @@ DATABASES = {
         'NAME': 'geonode_data',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '3.108.4.129',
+        'HOST': '13.200.36.215',
         'PORT': '5432',
     }
 }
@@ -1165,7 +1165,7 @@ OGC_SERVER = {
         "LOG_FILE": f"{os.path.abspath(os.path.join(PROJECT_ROOT, os.pardir))}/geoserver/data/logs/geoserver.log",
         # Set to name of database in DATABASES dictionary to enable
         # 'datastore',
-        "DATASTORE":'datastore',
+        "DATASTORE":'geonode_data',
         "TIMEOUT": int(os.getenv("OGC_REQUEST_TIMEOUT", "60")),
         "MAX_RETRIES": int(os.getenv("OGC_REQUEST_MAX_RETRIES", "3")),
         "BACKOFF_FACTOR": float(os.getenv("OGC_REQUEST_BACKOFF_FACTOR", "0.3")),
