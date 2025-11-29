@@ -548,7 +548,7 @@ INSTALLED_APPS = (
 
 
 
-MAPSTORE_PROXY_URL = "http://127.0.0.1:8000"
+MAPSTORE_PROXY_URL = "http://65.0.45.145:8000"
 markdown_white_listed_tags = [
     "a",
     "p",
