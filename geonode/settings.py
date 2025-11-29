@@ -81,7 +81,7 @@ _DEFAULT_SECRET_KEY = "myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a"
 SECRET_KEY = os.getenv("SECRET_KEY", _DEFAULT_SECRET_KEY)
 
 SITE_HOST_SCHEMA = os.getenv("SITE_HOST_SCHEMA", "http")
-SITE_HOST_NAME = os.getenv("SITE_HOST_NAME", "65.0.45.145")
+SITE_HOST_NAME = os.getenv("SITE_HOST_NAME", "geospace.cloudsentry.in")
 SITE_HOST_PORT = os.getenv("SITE_HOST_PORT", "8000")
 _default_siteurl = (
     f"{SITE_HOST_SCHEMA}://{SITE_HOST_NAME}:{SITE_HOST_PORT}/"
@@ -548,7 +548,8 @@ INSTALLED_APPS = (
 
 
 
-MAPSTORE_PROXY_URL = "http://65.0.45.145:8000"
+#MAPSTORE_PROXY_URL = "http://65.0.45.145:8000"
+MAPSTORE_PROXY_URL = "http://geospace.cloudsentry.in"
 markdown_white_listed_tags = [
     "a",
     "p",
@@ -1189,7 +1190,8 @@ EPSG_CODE_MATCHES = {
     "EPSG:32647": "(32647) WGS 84 / UTM zone 47N",
     "EPSG:32736": "(32736) WGS 84 / UTM zone 36S",
 }
-CATALOGUE_URL="http://65.0.45.145:8000/catalogue/csw"
+#CATALOGUE_URL="http://65.0.45.145:8000/catalogue/csw"
+CATALOGUE_URL="http://geospace.cloudsentry.in/catalogue/csw"
 # CSW settings
 CATALOGUE = {
     "default": {
