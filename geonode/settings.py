@@ -81,7 +81,7 @@ _DEFAULT_SECRET_KEY = "myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a"
 SECRET_KEY = os.getenv("SECRET_KEY", _DEFAULT_SECRET_KEY)
 
 SITE_HOST_SCHEMA = os.getenv("SITE_HOST_SCHEMA", "http")
-SITE_HOST_NAME = os.getenv("SITE_HOST_NAME", "13.127.205.132")
+SITE_HOST_NAME = os.getenv("SITE_HOST_NAME", "127.0.0.1")
 SITE_HOST_PORT = os.getenv("SITE_HOST_PORT", "8000")
 _default_siteurl = (
     f"{SITE_HOST_SCHEMA}://{SITE_HOST_NAME}:{SITE_HOST_PORT}/"
@@ -145,8 +145,8 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',  
         'NAME': 'geospace',         
         'USER': 'postgres',       
-        'PASSWORD': 'postgres', 
-        'HOST': '13.200.36.215',       
+        'PASSWORD': 'QU6DR5BznC', 
+        'HOST': 'localhost',       
         'PORT': '5432',         
     },
 
@@ -156,8 +156,8 @@ DATABASES = {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
         "NAME": "geospace",
         "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "13.200.36.215",
+        "PASSWORD": "QU6DR5BznC",
+        "HOST": "localhost",
         "PORT": "5432",
     }
 }
@@ -169,7 +169,7 @@ if os.getenv("DEFAULT_BACKEND_DATASTORE"):
     GEODATABASE_URL = os.getenv(
         "GEODATABASE_URL",
         "postgis://\
-geonode_data:geonode_data@13.200.36.215:5432/geonode_data",
+geonode_data:geonode_data@localhost:5432/geonode_data",
     )
     DATABASES[os.getenv("DEFAULT_BACKEND_DATASTORE")] = dj_database_url.parse(
         GEODATABASE_URL, conn_max_age=GEONODE_DB_CONN_MAX_AGE
@@ -548,7 +548,7 @@ INSTALLED_APPS = (
 
 
 
-MAPSTORE_PROXY_URL = "http://13.127.205.132:8000"
+MAPSTORE_PROXY_URL = "http://127.0.0.1:8000"
 markdown_white_listed_tags = [
     "a",
     "p",
@@ -1059,7 +1059,7 @@ TOPICCATEGORY_MANDATORY = ast.literal_eval(os.environ.get("TOPICCATEGORY_MANDATO
 
 MISSING_THUMBNAIL = os.getenv("MISSING_THUMBNAIL", "geonode/img/missing_thumb.png")
 
-GEOSERVER_LOCATION = os.getenv("GEOSERVER_LOCATION", "http://geoserver.cloudsentry.in/geoserver/")
+GEOSERVER_LOCATION = os.getenv("GEOSERVER_LOCATION", "http://localhost:8080/geoserver/")
 
 # add trailing slash to geoserver location url.
 if not GEOSERVER_LOCATION.endswith("/"):
@@ -1096,7 +1096,7 @@ GEOSERVER_FACTORY_PASSWORD = os.getenv("GEOSERVER_FACTORY_PASSWORD", "geoserver"
 # OGC_SERVER = {
 #     "default": {
 #         "BACKEND": os.getenv("BACKEND", "geonode.geoserver"),
-#         "LOCATION": 'http://geoserver.cloudsentry.in/geoserver/',
+#         "LOCATION": 'http://localhost:8080/geoserver/',
 #         "WEB_UI_LOCATION": GEOSERVER_WEB_UI_LOCATION,
 #         "LOGIN_ENDPOINT": "j_spring_oauth2_geonode_login",
 #         "LOGOUT_ENDPOINT": "j_spring_oauth2_geonode_logout",
@@ -1137,14 +1137,14 @@ OGC_SERVER = {
     "default": {
         # "BACKEND": os.getenv("BACKEND", "geonode.geoserver"),
         "BACKEND": "geonode.geoserver",
-        "LOCATION": 'http://geoserver.cloudsentry.in/geoserver/',
+        "LOCATION": 'http://localhost:8080/geoserver/',
         "WEB_UI_LOCATION": GEOSERVER_WEB_UI_LOCATION,
         "LOGIN_ENDPOINT": "j_spring_oauth2_geonode_login",
         "LOGOUT_ENDPOINT": "j_spring_oauth2_geonode_logout",
         # PUBLIC_LOCATION needs to be kept like this because in dev mode
         # the proxy won't work and the integration tests will fail
         # the entire block has to be overridden in the local_settings
-        "PUBLIC_LOCATION": 'http://geoserver.cloudsentry.in/geoserver/',
+        "PUBLIC_LOCATION": 'http://localhost:8080/geoserver/',
          "USER": "admin",
         "PASSWORD": "geoserver",
         "MAPFISH_PRINT_ENABLED": ast.literal_eval(os.getenv("MAPFISH_PRINT_ENABLED", "True")),
