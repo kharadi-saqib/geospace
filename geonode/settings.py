@@ -146,7 +146,7 @@ DATABASES = {
         'NAME': 'geospace',         
         'USER': 'postgres',       
         'PASSWORD': 'postgres', 
-        'HOST': '3.110.79.12',       
+        'HOST': 'pgd.cloudsentry.in',       
         'PORT': '5432',         
     },
 
@@ -157,7 +157,7 @@ DATABASES = {
         "NAME": "geospace",
         "USER": "postgres",
         "PASSWORD": "postgres",
-        "HOST": "3.110.79.12",
+        "HOST": "pgd.cloudsentry.in",
         "PORT": "5432",
     }
 }
@@ -169,7 +169,7 @@ if os.getenv("DEFAULT_BACKEND_DATASTORE"):
     GEODATABASE_URL = os.getenv(
         "GEODATABASE_URL",
         "postgis://\
-geonode_data:geonode_data@3.110.79.12:5432/geonode_data",
+geonode_data:geonode_data@pgd.cloudsentry.in:5432/geonode_data",
     )
     DATABASES[os.getenv("DEFAULT_BACKEND_DATASTORE")] = dj_database_url.parse(
         GEODATABASE_URL, conn_max_age=GEONODE_DB_CONN_MAX_AGE
