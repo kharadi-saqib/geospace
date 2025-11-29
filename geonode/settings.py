@@ -1389,6 +1389,7 @@ except ValueError:
         [
             HOSTNAME,
              "geospace.coderize.in",
+             "geospace.cloudsentry.in",
             "localhost",
              #'209.182.234.193',  # Allow all proxy hosts (if necessary)
             "django",
@@ -2423,6 +2424,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 # NGINX_BASE_URL="http://geospace.coderize.in/"
+NGINX_BASE_URL="http://geospace.cloudsentry.in/"
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 UPLOAD_ENABLED = True
 # Enable the geonode client upload menu
