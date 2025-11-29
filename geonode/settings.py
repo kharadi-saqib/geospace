@@ -82,7 +82,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", _DEFAULT_SECRET_KEY)
 
 SITE_HOST_SCHEMA = os.getenv("SITE_HOST_SCHEMA", "http")
 SITE_HOST_NAME = os.getenv("SITE_HOST_NAME", "geospace.cloudsentry.in")
-SITE_HOST_PORT = os.getenv("SITE_HOST_PORT", "")
+SITE_HOST_PORT = os.getenv("SITE_HOST_PORT", "8000")
 _default_siteurl = (
     f"{SITE_HOST_SCHEMA}://{SITE_HOST_NAME}:{SITE_HOST_PORT}/"
     if SITE_HOST_PORT
@@ -1190,8 +1190,7 @@ EPSG_CODE_MATCHES = {
     "EPSG:32647": "(32647) WGS 84 / UTM zone 47N",
     "EPSG:32736": "(32736) WGS 84 / UTM zone 36S",
 }
-#CATALOGUE_URL="http://65.0.45.145:8000/catalogue/csw"
-CATALOGUE_URL="http://geospace.cloudsentry.in/catalogue/csw"
+CATALOGUE_URL="http://65.0.45.145:8000/catalogue/csw"
 # CSW settings
 CATALOGUE = {
     "default": {
@@ -1389,7 +1388,6 @@ except ValueError:
         [
             HOSTNAME,
              "geospace.coderize.in",
-             "geospace.cloudsentry.in",
             "localhost",
              #'209.182.234.193',  # Allow all proxy hosts (if necessary)
             "django",
@@ -2424,7 +2422,6 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 # NGINX_BASE_URL="http://geospace.coderize.in/"
-NGINX_BASE_URL="http://geospace.cloudsentry.in/"
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 UPLOAD_ENABLED = True
 # Enable the geonode client upload menu
