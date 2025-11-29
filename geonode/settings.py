@@ -145,8 +145,8 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',  
         'NAME': 'geospace',         
         'USER': 'postgres',       
-        'PASSWORD': 'QU6DR5BznC', 
-        'HOST': 'localhost',       
+        'PASSWORD': 'postgres', 
+        'HOST': '3.110.79.12',       
         'PORT': '5432',         
     },
 
@@ -156,8 +156,8 @@ DATABASES = {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
         "NAME": "geospace",
         "USER": "postgres",
-        "PASSWORD": "QU6DR5BznC",
-        "HOST": "localhost",
+        "PASSWORD": "postgres",
+        "HOST": "3.110.79.12",
         "PORT": "5432",
     }
 }
@@ -169,7 +169,7 @@ if os.getenv("DEFAULT_BACKEND_DATASTORE"):
     GEODATABASE_URL = os.getenv(
         "GEODATABASE_URL",
         "postgis://\
-geonode_data:geonode_data@localhost:5432/geonode_data",
+geonode_data:geonode_data@3.110.79.12:5432/geonode_data",
     )
     DATABASES[os.getenv("DEFAULT_BACKEND_DATASTORE")] = dj_database_url.parse(
         GEODATABASE_URL, conn_max_age=GEONODE_DB_CONN_MAX_AGE
@@ -1059,7 +1059,7 @@ TOPICCATEGORY_MANDATORY = ast.literal_eval(os.environ.get("TOPICCATEGORY_MANDATO
 
 MISSING_THUMBNAIL = os.getenv("MISSING_THUMBNAIL", "geonode/img/missing_thumb.png")
 
-GEOSERVER_LOCATION = os.getenv("GEOSERVER_LOCATION", "http://localhost:8080/geoserver/")
+GEOSERVER_LOCATION = os.getenv("GEOSERVER_LOCATION", "http://geoserver.cloudsentry.in/geoserver/")
 
 # add trailing slash to geoserver location url.
 if not GEOSERVER_LOCATION.endswith("/"):
@@ -1137,14 +1137,14 @@ OGC_SERVER = {
     "default": {
         # "BACKEND": os.getenv("BACKEND", "geonode.geoserver"),
         "BACKEND": "geonode.geoserver",
-        "LOCATION": 'http://localhost:8080/geoserver/',
+        "LOCATION": 'http://geoserver.cloudsentry.in/geoserver/',
         "WEB_UI_LOCATION": GEOSERVER_WEB_UI_LOCATION,
         "LOGIN_ENDPOINT": "j_spring_oauth2_geonode_login",
         "LOGOUT_ENDPOINT": "j_spring_oauth2_geonode_logout",
         # PUBLIC_LOCATION needs to be kept like this because in dev mode
         # the proxy won't work and the integration tests will fail
         # the entire block has to be overridden in the local_settings
-        "PUBLIC_LOCATION": 'http://localhost:8080/geoserver/',
+        "PUBLIC_LOCATION": 'http://geoserver.cloudsentry.in/geoserver/',
          "USER": "admin",
         "PASSWORD": "geoserver",
         "MAPFISH_PRINT_ENABLED": ast.literal_eval(os.getenv("MAPFISH_PRINT_ENABLED", "True")),
