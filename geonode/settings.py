@@ -1189,7 +1189,7 @@ EPSG_CODE_MATCHES = {
     "EPSG:32647": "(32647) WGS 84 / UTM zone 47N",
     "EPSG:32736": "(32736) WGS 84 / UTM zone 36S",
 }
-CATALOGUE_URL="http://209.182.234.193:8007/catalogue/csw"
+CATALOGUE_URL="http://65.0.45.145:8000/catalogue/csw"
 # CSW settings
 CATALOGUE = {
     "default": {
